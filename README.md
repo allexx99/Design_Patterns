@@ -1,4 +1,5 @@
 ## Factory Method
+<h6>
 This pattern provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
 
 - For example, you want to implement a logistic management application and the first version of the app can only handle transportation by trucks, so the bulk of the code lives inside the Truck class.
@@ -9,3 +10,4 @@ This pattern provides an interface for creating objects in a superclass, but all
 Solution:
 - The Factory Method sugests that you replace direct objects construction calls (using the new operator) with calls to a special "factory method".
 - The objects are still created using the "new" operator, but it's being called from within the factory method.
+</h6>
