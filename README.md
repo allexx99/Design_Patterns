@@ -13,6 +13,7 @@
 </h6>
 
 <img src="https://github.com/user-attachments/assets/a4e5821f-8b84-4175-99fb-54d65043d1f7" width="500">
+
 <h6>
   <ol> 
     <li> The "Product" declares the interface, which is common to all objects that can be produced by the creator and its subclasses. </li>
