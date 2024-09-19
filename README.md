@@ -11,4 +11,5 @@ Solution:
 - The Factory Method sugests that you replace direct objects construction calls (using the new operator) with calls to a special "factory method".
 - The objects are still created using the "new" operator, but it's being called from within the factory method.
 </h6>
-![image](https://github.com/user-attachments/assets/a4e5821f-8b84-4175-99fb-54d65043d1f7)
+
+<img src="https://github.com/user-attachments/assets/a4e5821f-8b84-4175-99fb-54d65043d1f7" width="500">
