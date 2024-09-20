@@ -12,7 +12,7 @@
   - The objects are still created using the "new" operator, but it's being called from within the factory method.
 </h6>
 
-<img src="https://github.com/user-attachments/assets/a4e5821f-8b84-4175-99fb-54d65043d1f7" width="500">
+<img src="https://github.com/user-attachments/assets/2300ab83-4e4a-4858-9f51-f61a87e027bb" width="650">
 
 <h6>
   <ol> 
