@@ -1,5 +1,9 @@
+package concreteProducts;
+
+import abstractProducts.Transport;
+
 // concrete object "boat"
-public class Boat implements Transport{
+public class Boat implements Transport {
 
     @Override
     public void deliver() {

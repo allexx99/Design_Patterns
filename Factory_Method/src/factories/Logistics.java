@@ -1,5 +1,9 @@
+package factories;
+
+import abstractProducts.Transport;
+
 // Creator class
 public abstract class Logistics {
-    // factory method
+    // factories method
     public abstract Transport createTransport();
 }
