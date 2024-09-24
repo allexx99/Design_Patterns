@@ -53,5 +53,5 @@ Solution:
   </ul>
 </h6>
 
-<img src="https://github.com/user-attachments/assets/c029e96c-a6d0-40d8-9921-37a78a24e594" width="650">
+<img src="https://github.com/user-attachments/assets/f50a7c1f-1ff0-4038-9311-93bda0a41ae3" width="650">
 
