@@ -47,11 +47,7 @@ Solution:
 
 <img src="https://github.com/user-attachments/assets/3b113e2d-3b59-4548-8bc5-b316eeb8196a" width="450">
 
-<h6>
-  <ul>
-    <li>Complete Diagram</li>
-  </ul>
-</h6>
+<h6>Complete diagram</h6>
 
 <img src="https://github.com/user-attachments/assets/f50a7c1f-1ff0-4038-9311-93bda0a41ae3" width="650">
 
@@ -81,5 +77,42 @@ Solution:
     <li>The Singleton class declares the static method 'getInstance' that returns the same instance of its own class</li>
     <li>The Singleton's constructor should be hidden from the client code</li>
     <li>Calling the 'getInstance' method should be the only way of getting the Singleton object</li>
+  </ul>
+</h6>
+
+## Builder
+
+<h6>
+ &emsp; The builder pattern separates the construction of a complex object from its representation, allowing for the same construction process to create different representations. It’s particularly useful when constructing objects with many optional or    varying parts.
+  
+  <br/>For example
+  <ul>
+    <li>An online pizza ordering system allows customers to create custom pizzas with various combinations of crust, sauce, cheese, and toppings</li>
+    <li>The Builder pattern can be employed to construct pizza objects with different compositions, while keeping the construction process consistent</li>
+  </ul>
+
+  Implementation typically involves
+  <ul>
+    <li>Defining a builder interface or abstract class with methods for constructing the object’s parts</li>
+    <li>Implementing concrete builder classes for each object representation</li>
+    <li>Creating a director class that takes a builder object and constructs the object using the builder’s methods</li>
+    <li>Clients use the director with a specific builder to create the desired object representation</li>
+  </ul>
+
+  Complete Diagram
+</h6>
+
+  <img src="https://github.com/user-attachments/assets/7d6927d7-7f8d-4342-935d-9cee50103beb" width="700">
+
+<h6>
+  <ul>
+    <li>A car is a complex object that can be constructed in a hundred different ways. Instead of bloating the Car class with a huge constructor, we extracted the car assembly code into a separate car builder class. This class has a set of methods for configuring various parts of a car.</li>
+    <li>If the client code needs to assemble a special, fine-tuned model of a car, it can work with the builder directly. On the other hand, the client can delegate the assembly to the director class, which knows how to use a builder to construct several of the most popular models of cars.</li>
+    <li>The manual describes every feature of the car, so the details in the manuals vary across the different models. That’s why it makes sense to reuse an existing construction process for both real cars and their respective manuals</li>
+    <li>Of course, building a manual isn’t the same as building a car, and that’s why we must provide another builder class that specializes in composing manuals</li>
+    <li>This class implements the same building methods as its car-building sibling, but instead of crafting car parts, it describes them</li>
+    <li>By passing these builders to the same director object, we can construct either a car or a manual</li>
+    <li>The final part is fetching the resulting object. A metal car and a paper manual, although related, are still very different things</li>
+    <li>We obtain the result of the construction from the builder which performed the job</li>
   </ul>
 </h6>
