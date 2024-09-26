@@ -22,3 +22,36 @@
     <li> Concrete Creators (RoadLogistics and BoatLogistics) override the base factory method so it return a different type of Transport. Note that the factory method doesn’t have to create new instances all the time. It can also return existing objects from a cache, an object pool, or another source. </li>
   </ol>
 </h6>
+
+## Abstract Factory
+
+<h6>
+  Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes.
+
+  - Imagine that you’re creating a furniture shop simulator. Your code consists of classes that represent: a family o related products like Chair, Sofa and CoffeeTable and several variants of this family. For example, products Chair, Sofa and CoffeeTable are available in these variants: Modern, Victorian and ArtDeco
+  - You need a way to create individual furniture objects so that they match other objects of the same family.
+  - Also, you don’t want to change existing code when adding new products or families of products to the program. Furniture vendors update their catalogs very often, and you wouldn’t want to change the core code each time it happens.
+
+Solution:
+- The first thing the Abstract Factory pattern suggests is to explicitly declare interfaces for each distinct product of the product family (e.g., chair, sofa or coffee table).
+- Then you can make all variants of products follow those interfaces. For example, all chair variants can implement the Chair interface; all coffee table variants can implement the CoffeeTable interface, and so on.
+</h6>
+
+<img src="https://github.com/user-attachments/assets/da4e6ed8-7e6b-47f2-af16-a358993f1e93" width="450">
+
+<h6>
+  <ul>
+    <li>The next move is to declare the Abstract Factory—an interface with a list of creation methods for all products that are part of the product family (for example, createChair, createSofa and createCoffeeTable), and for each variant of a product family, we create a separate factory class based on the AbstractFactory interface. A factory is a class that returns products of a particular kind.</li>
+  </ul>
+</h6>
+
+<img src="https://github.com/user-attachments/assets/3b113e2d-3b59-4548-8bc5-b316eeb8196a" width="450">
+
+<h6>
+  <ul>
+    <li>Complete Diagram</li>
+  </ul>
+</h6>
+
+<img src="https://github.com/user-attachments/assets/f50a7c1f-1ff0-4038-9311-93bda0a41ae3" width="650">
+
