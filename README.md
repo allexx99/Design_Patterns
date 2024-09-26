@@ -55,3 +55,31 @@ Solution:
 
 <img src="https://github.com/user-attachments/assets/f50a7c1f-1ff0-4038-9311-93bda0a41ae3" width="650">
 
+## Singleton
+
+<h6>
+  Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.
+  <ul>
+    <li>Make the default constructor private, to prevent other objects from using the new operator with the Singleton class</li>
+    <Li>Create a static creation method that acts as a constructor. Under the hood, this method calls the private constructor to create an object and saves it in a static field. All following calls to this method return the cached object.</Li>
+    <li>If your code has access to the Singleton class, then it’s able to call the Singleton’s static method. So whenever that method is called, the same object is always returned</li>
+  </ul>
+  Applicability
+  <ul>
+    <li>Use the Singleton pattern when a class in your program should have just a single instance available to all clients; for example, a single database object shared by different parts of the program.</li>
+    <li>The Singleton pattern disables all other means of creating objects of a class except for the special creation method. This method either creates a new object or returns an existing one if it has already been created.</li>
+    <li>Note that you can always adjust this limitation and allow creating any number of Singleton instances. The only piece of code that needs changing is the body of the getInstance method.</li>
+  </ul>
+  Real world analogy<br/>
+  &emsp; The government is an excellent example of the Singleton pattern. A country can have only one official government. Regardless of the personal identities of the individuals who form governments, the title, “The Government of X”, is a global point of access that identifies the group of people in charge.
+</h6>
+
+<img src="https://github.com/user-attachments/assets/bde73015-9d76-4b14-89a8-0383bf294236" width="450">
+
+<h6>
+  <ul>
+    <li>The Singleton class declares the static method 'getInstance' that returns the same instance of its own class</li>
+    <li>The Singleton's constructor should be hidden from the client code</li>
+    <li>Calling the 'getInstance' method should be the only way of getting the Singleton object</li>
+  </ul>
+</h6>
