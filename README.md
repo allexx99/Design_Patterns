@@ -116,3 +116,43 @@ Solution:
     <li>We obtain the result of the construction from the builder which performed the job</li>
   </ul>
 </h6>
+
+## Prototype
+<h6>
+  Prototype is a creational design pattern that lets you copy existing objects without making your code dependent on their classes.<br/>
+  <br/> 
+  Problem
+  <ul>
+    <li>Say you have an object, and you want to create an exact copy of it. How would you do it?</li>
+    <li>First, you have to create a new object of the same class.</li>
+    <li>Then you have to go through all the fields of the original object and copy their values over to the new object.</li>
+    <li>Nice! But there’s a catch. Not all objects can be copied that way because some of the object’s fields may be private and not visible from outside of the object itself.</li>
+    <li>There’s one more problem with the direct approach. Since you have to know the object’s class to create a duplicate, your code becomes dependent on that class</li>
+    <li>there’s another catch. Sometimes you only know the interface that the object follows, but not its concrete class, when, for example, a parameter in a method accepts any objects that follow some interface.</li>
+  </ul>
+  Solution
+  <ul>
+    <li>The Prototype pattern delegates the cloning process to the actual objects that are being cloned.</li>
+    <li>The pattern declares a common interface(abstract class) for all objects that support cloning.</li>
+    <li>This interface(abstract class) lets you clone an object without coupling your code to the class of that object.</li>
+    <li>Usually, such a class contains just a single clone method.</li>
+    <li>Here’s how it works: you create a set of objects, configured in various ways. When you need an object like the one you’ve configured, you just clone a prototype instead of constructing a new object from scratch.</li>
+  </ul>
+</h6>
+
+<h6>
+  In this example, the Prototype pattern lets you produce exact copies of geometric objects, without coupling the code to their classes.
+</h6>
+<img src="https://github.com/user-attachments/assets/bda349a6-d372-46e1-9053-257b660beb0a" width="700">
+
+<h6>
+  How to implement
+  <ol>
+    <li>Create the prototype abstract class and declare the clone method in it. Or just add the method to all classes of an existing class hierarchy, if you have one.</li>
+    <li>A prototype class must define the alternative constructor that accepts an object of that class as an argument. The constructor must copy the values of all fields defined in the class from the passed object into the newly created instance. If you’re changing a subclass, you must call the parent constructor to let the superclass handle the cloning of its private fields.</li>
+    <li>The cloning method usually consists of just one line: running a new operator with the prototypical version of the constructor.</li>
+    <li>Optionally, create a centralized prototype registry to store a catalog of frequently used prototypes.</li>
+    <li>You can implement the registry as a new factory class or put it in the base prototype class with a static method for fetching the prototype. This method should search for a prototype based on search criteria that the client code passes to the method. </li>
+  </ol>
+</h6>
+
