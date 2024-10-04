@@ -18,6 +18,8 @@ public class Main {
         circle.color = "red";
         shapes.add(circle);
 
+        // The `anotherCircle` variable contains an exact copy
+        // of the `circle` object.
         Circle anotherCircle = (Circle) circle.clone();
         shapes.add(anotherCircle);
 

@@ -1,3 +1,10 @@
+// Concrete prototype. The cloning method creates a new object
+// by calling the constructor of the current class and
+// passing the current object as the constructor's argument.
+// Performing all the actual copying in the constructor helps to
+// keep the result consistent: the constructor will not return a
+// result until the new object is fully built; thus, no object
+// can have a reference to a partially-built clone.
 package shapes;
 
 public class Circle extends Shape{
@@ -7,6 +14,8 @@ public class Circle extends Shape{
     public Circle(){}
 
     public Circle(Circle target) {
+        // A parent constructor call is needed to copy private
+        // fields defined in the parent class.
         super(target);
         if(target != null) {
             this.radius = target.radius;

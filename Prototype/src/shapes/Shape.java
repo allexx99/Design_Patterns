@@ -1,3 +1,4 @@
+// Base prototype
 package shapes;
 
 import java.util.Objects;
@@ -9,6 +10,8 @@ public abstract class Shape {
 
     public Shape(){}
 
+    // The prototype constructor. A fresh object is initialized
+    // with values from the existing object.
     public Shape(Shape target) {
         if(target != null) {
             this.x = target.x;
@@ -17,6 +20,7 @@ public abstract class Shape {
         }
     }
 
+    // The clone operation returns one of the Shape subclasses.
     public abstract Shape clone();
 
     @Override
