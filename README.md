@@ -23,6 +23,6 @@
 
   &emsp; In this example, the Strategy pattern is used to implement the various payment methods in an e-commerce application. After selecting a product to purchase, a customer picks a payment method: either Paypal or credit card. <br/>
   &emsp; Concrete strategies not only perform the actual payment but also alter the behavior of the checkout form, providing appropriate fields to record payment details.
-
-  <img src="https://github.com/user-attachments/assets/c8b2eac8-7853-45b5-9b1d-89d260e969db" width="700">
 </h6>
+
+<img src="https://github.com/user-attachments/assets/c8b2eac8-7853-45b5-9b1d-89d260e969db" width="700">
